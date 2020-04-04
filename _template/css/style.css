@@ -39,6 +39,8 @@ body {
   font: inherit;
   outline: none;
   padding: 0.5rem;
+  text-emphasis: none;
+  text-decoration: none;
 
   background-color: var(--default-btn);
   border-radius: 0.2rem;
@@ -87,6 +89,10 @@ nav > .container {
   background-position: center;
   background-size: 50%;
   user-select: none;
+}
+
+.brand:hover {
+  cursor: pointer;
 }
 
 .links {
@@ -190,13 +196,17 @@ nav > .container {
   transform: translateX(-50%);
 }
 
-.banner > .overlay > .buttons > button {
+.banner > .overlay > .buttons > a {
   margin: 1rem;
   height: 5rem;
   font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.banner > .overlay > .buttons > button:hover {
+.banner > .overlay > .buttons > a:hover {
   margin: 1rem;
   height: 5rem;
   font-size: 2.5rem;
@@ -204,17 +214,13 @@ nav > .container {
 
 .btn-contact {
   background-color: var(--btn-contact);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.btn-contact > span:first-child {
+.banner > .overlay > .buttons > a > span:first-child {
   font-size: 2rem;
 }
 
-.btn-contact > span:last-child {
+.banner > .overlay > .buttons > a > span:last-child {
   font-size: 1rem;
 }
 
