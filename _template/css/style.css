@@ -1,0 +1,239 @@
+/* General Stuff */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Variables */
+
+:root {
+  --nav-background: rgb(15, 82, 170);
+  --nav-background-sec: rgba(255, 255, 255, 0.4);
+  --default-btn: rgba(144, 59, 13, 1);
+  --background-color: rgba(169, 123, 76);
+  --btn-contact: var(--nav-background);
+  --btn-whatsapp: rgba(18, 188, 24, 1);
+  --btn-contact-hover: rgb(0, 62, 150, 1);
+  --btn-whatsapp-hover: rgba(0, 158, 0, 1);
+}
+
+/* Utility classes */
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 70%;
+}
+
+.btn {
+  border: none;
+  font: inherit;
+  outline: none;
+  padding: 0.5rem;
+
+  background-color: var(--default-btn);
+  border-radius: 0.2rem;
+  color: white;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.48);
+  transition: 0.3s ease;
+  transition-property: background-color, border, box-shadow, color, transform;
+}
+
+.btn:hover {
+  border: none;
+  outline: none;
+
+  background-color: var(--nav-background-sec);
+  cursor: pointer;
+  color: white;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.48);
+}
+
+/* Navbar */
+
+nav {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--nav-background);
+  box-shadow: -1px -1px 10px -1px black;
+  z-index: 5;
+}
+
+nav > .container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  height: 100%;
+  width: 5rem;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  user-select: none;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.links > ul {
+  list-style-type: none;
+}
+
+.links > ul > li {
+  float: left;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  transition: 0.3s ease;
+  transition-property: background-color, box-shadow;
+}
+
+.links > ul > li:hover {
+  background-color: var(--nav-background-sec);
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.48);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.links > ul > li > a {
+  text-emphasis: none;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-search {
+  background-color: white !important;
+  color: var(--nav-background);
+  margin-left: 2rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-search:hover {
+  background-color: var(--nav-background) !important;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+}
+
+/* Main */
+
+/* Banner */
+
+.banner {
+  z-index: 1;
+  background-image: url(../img/banner.jpg);
+  height: calc(100vh - 5rem);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.banner > .overlay {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner > .overlay > h1 {
+  font-size: 5rem;
+  width: 60rem;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.banner > .overlay > h2 {
+  font-size: 2rem;
+  font-weight: lighter;
+  width: fit-content;
+  position: absolute;
+  top: 22rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner > .overlay > .buttons {
+  width: 30rem;
+  height: 15rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 28rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner > .overlay > .buttons > button {
+  margin: 1rem;
+  height: 5rem;
+  font-size: 2.5rem;
+}
+
+.banner > .overlay > .buttons > button:hover {
+  margin: 1rem;
+  height: 5rem;
+  font-size: 2.5rem;
+}
+
+.btn-contact {
+  background-color: var(--btn-contact);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-contact > span:first-child {
+  font-size: 2rem;
+}
+
+.btn-contact > span:last-child {
+  font-size: 1rem;
+}
+
+.btn-contact:hover {
+  background-color: var(--btn-contact-hover);
+}
+
+.btn-whatsapp {
+  background-color: var(--btn-whatsapp);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--btn-whatsapp-hover);
+}
+
+.banner > .overlay > p {
+  width: 40rem;
+  position: absolute;
+  top: 44rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

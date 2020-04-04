@@ -1,0 +1,23 @@
+{
+  "name": "blusav",
+  "version": "1.0.0",
+  "description": "Blu Sav website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rshrj/blusav.git"
+  },
+  "keywords": [
+    "Website",
+    "MERN"
+  ],
+  "author": "Rishi Raj <rishiraj.1012exp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rshrj/blusav/issues"
+  },
+  "homepage": "https://github.com/rshrj/blusav#readme"
+}
