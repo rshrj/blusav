@@ -19,11 +19,12 @@ body {
   --nav-background: rgb(15, 82, 170);
   --nav-background-sec: rgba(255, 255, 255, 0.4);
   --default-btn: rgba(144, 59, 13, 1);
-  --background-color: rgba(169, 123, 76);
+  --background-color: rgba(255, 255, 255, 1);
   --btn-contact: var(--nav-background);
   --btn-whatsapp: rgba(18, 188, 24, 1);
   --btn-contact-hover: rgb(0, 62, 150, 1);
   --btn-whatsapp-hover: rgba(0, 158, 0, 1);
+  --offering-color: rgba(236, 239, 243, 1);
 }
 
 /* Utility classes */
@@ -149,7 +150,7 @@ nav > .container {
 .banner {
   z-index: 1;
   background-image: url(../img/banner.jpg);
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 5rem + 3vw);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -168,7 +169,7 @@ nav > .container {
   font-size: 5rem;
   width: 60rem;
   position: absolute;
-  top: 5rem;
+  top: 4rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -179,7 +180,7 @@ nav > .container {
   font-weight: lighter;
   width: fit-content;
   position: absolute;
-  top: 22rem;
+  top: 20rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -191,7 +192,7 @@ nav > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 28rem;
+  top: 24rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -239,7 +240,169 @@ nav > .container {
 .banner > .overlay > p {
   width: 40rem;
   position: absolute;
-  top: 44rem;
+  top: 40rem;
   left: 50%;
   transform: translateX(-50%);
 }
+
+.features {
+  position: absolute;
+  top: 49rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  border-radius: 3rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--offering-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+}
+
+.features > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: auto;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.1rem;
+}
+
+.features > ul > li > i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.banner > .overlay > .divider {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3vw;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIzdnciIHZpZXdCb3g9IjAgMCAxMjgwIDE0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIj48cGF0aCBkPSJNNjQwIDE0MEMyODYuNTQgMTQwIDAgMCAwIDBoMTI4MFM5OTMuNDYgMTQwIDY0MCAxNDB6Ii8+PC9nPjwvc3ZnPg==);
+  background-size: 100% 3vw;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  transform: rotateX(180deg);
+  margin-bottom: -1px;
+}
+
+/* What do we do */
+
+#section_whatdowedo {
+  position: relative;
+  z-index: 4;
+  background-color: white;
+}
+
+#section_whatdowedo .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+#section_whatdowedo .text {
+  width: 35vw;
+  text-align: center;
+}
+
+#section_whatdowedo .text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#section_whatdowedo .offerings > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  list-style-type: none;
+}
+
+#section_whatdowedo .offerings > ul > li {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.1rem;
+}
+
+#section_whatdowedo .offerings > ul > li:nth-child(2) {
+  margin-top: 7rem;
+}
+
+#section_whatdowedo .offerings > ul > li:nth-child(3) {
+  margin-top: 10rem;
+}
+
+#section_whatdowedo .offerings > ul > li:nth-child(4) {
+  margin-top: 7rem;
+}
+
+#section_whatdowedo .offerings h3 {
+  margin-bottom: 0.5rem;
+}
+
+#section_whatdowedo .offerings p {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+#section_whatdowedo .offerings .offering-logo-wrap {
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
+  border: 2px solid var(--offering-color);
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#section_whatdowedo .offerings .offering-logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section_whatdowedo .offerings .offering-logo-1 {
+  background-image: url(../img/offering-logos/1.webp);
+}
+
+#section_whatdowedo .offerings .offering-logo-2 {
+  background-image: url(../img/offering-logos/2.webp);
+}
+
+#section_whatdowedo .offerings .offering-logo-3 {
+  background-image: url(../img/offering-logos/3.webp);
+}
+
+#section_whatdowedo .offerings .offering-logo-4 {
+  background-image: url(../img/offering-logos/4.webp);
+}
+
+#section_whatdowedo .offerings .offering-logo-5 {
+  background-image: url(../img/offering-logos/5.webp);
+}
+
+/* Responsive */
