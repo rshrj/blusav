@@ -1,4 +1,5 @@
 window.onscroll = scrollFunction;
+window.onload = scrollFunction;
 
 function scrollFunction() {
   var nav = document.querySelector("nav");
